@@ -1,0 +1,78 @@
+:root{
+	--Rosewater : #f4dbd6;	 
+	--Flamingo: #f0c6c6; 
+	--Pink: #f5bde6; 
+	--Mauve: #c6a0f6;
+	--Red: #eb697c;
+	--Maroon: #ee99a0;
+	--Peach: #f5a97f;
+	--Yellow: #eed49f;
+	--Green: #6bb653;
+	--Teal: #6fbdb1;
+	--HoverTeal: #15b89f;
+	--Sky: #91d7e3;
+	--Sapphire: #7dc4e4;
+	--Blue: #759ff1;
+	--HoverBlue: #5285e9;
+	--Lavender: #b7bdf8;
+	--Text: white;
+	--Subtext1: #b8c0e0;
+	--Subtext0: #a5adcb;
+	--Overlay2: #939ab7;
+	--Overlay1: #8087a2;
+	--Overlay0: #6e738d;
+	--Surface2: #5b6078;
+	--Surface1: #494d64;
+	--Surface0: #363a4f;
+	--Base: #24273a;
+	--Mantle: #1e2030;
+	--Crust: #181926;
+}
+
+body {
+	color: var(--Blue);
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+	background-color: #000113;
+    background-image: url("images/stars.jpg");
+    background-size: cover; /* Keeps the original size of the image */
+	height: 100vh;
+}
+p {
+	font-size: large;
+}
+#profile, #tools-tech{
+    padding: 70px;
+}
+
+#educ-bg, #sample-projects {
+    padding: 100px;
+    border-radius: 20px;
+	backdrop-filter: blur(5px);
+	border-radius: 20px;	
+	background: rgba(33, 41, 53, 0.2); /* Greyish blue with 20% opacity */
+}
+#profile {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	justify-content: center;
+	align-items: center;
+}
+#introduction {
+	width: 50%;
+}
+#profile-pic{
+	width: 350px;
+	border-radius: 50%;
+	padding: 0px;
+}
+
+#moon {
+	position:absolute;
+	top: 45%;
+	right: 10%;
+	z-index: -10;
+	width: 200px;
+}
