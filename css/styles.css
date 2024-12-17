@@ -127,7 +127,7 @@ h1 {
     }
     50% {
         top: 190%;
-        left: 90%;
+        left: 70%;
     }
     75% {
         top: 210%;
@@ -156,7 +156,7 @@ h1 {
         top: 110%;
     }
     25% {
-        left: 80%;
+        left: 70%;
         top: 150%;
         transform: rotate(90deg);
     }
@@ -166,7 +166,7 @@ h1 {
         transform: rotate(360deg);
     }
     75% {
-        left: 80%;
+        left: 70%;
         top: 90%;
         transform: rotate(90deg);
     }
