@@ -6,22 +6,31 @@ body {
     font-style: normal;
 	background-color: #000113;
     background-image: url("/images/stars.jpg");
-    background-size: cover; /* Keeps the original size of the image */
+    background-size: cover;
 	height: 100vh;
 }
 p {
 	font-size: large;
 }
+h1 {
+	font: larger;
+}
 #profile, #tools-tech{
-    padding: 70px;
+    padding: 50px;
 }
 
+#tools-tech {
+	text-align: center;
+}
 #educ-bg, #sample-projects {
-    padding: 100px;
+	text-align: center;
+    padding: 20px;
     border-radius: 20px;
 	backdrop-filter: blur(5px);
 	border-radius: 20px;	
-	background: rgba(33, 41, 53, 0.2); /* Greyish blue with 20% opacity */
+	background: rgba(35, 43, 56, 0.2);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for effect */
+	margin: 20px;
 }
 #profile {
 	display: flex;
@@ -32,24 +41,25 @@ p {
 }
 #introduction {
     width: 60%;
-    margin: 0 auto; /* Centers the content */
+    margin: 0 auto;
+	padding: 20px 0 20px 0;
 }
 
 #introduction h1, #introduction p {
     margin: 0;
 }
 
-/* For smaller screens, make the div take up the full width */
+
 @media screen and (max-width: 768px) {
     #introduction {
-        width: 90%; /* Take up 90% of the screen width */
+        width: 90%;
     }
 }
 
-/* For very small screens, make the div take up the full width */
+
 @media screen and (max-width: 480px) {
     #introduction {
-        width: 100%; /* Take up 100% of the screen width */
+        width: 100%;
     }
 }
 
@@ -65,4 +75,56 @@ p {
 	right: 20%;
 	z-index: -10;
 	width: 200px;
+}
+
+#schools {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+	/* min-width: 250px; */
+}
+.lpu {
+	width: 250px;
+}
+
+.college {
+	display: flex;
+	padding: 20px;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	border: var(--Mantle) 2px solid;
+	border-radius: 20px;
+}
+
+#lpuc {
+	width: 190px;
+}
+
+#tech {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: center; /* Center the rows horizontally */
+    gap: 20px; /* Space between items */
+    max-width: 600px; /* Restrict width to control the layout */
+    margin: auto;
+}
+
+.logos {
+    flex: 1 0 30%; /* Each item takes 30% of the row's width */
+    max-width: 120px; /* Prevent logos from growing too large */
+    height: auto; /* Maintain aspect ratio */
+    margin: auto; /* Center logos within their cell */
+	transition: transform 0.15s ease, box-shadow 0.15s ease; /* Smooth animation */
+}
+
+.logos:hover {
+	transform: scale(1.2); /* Enlarge the logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for effect */
+}
+
+.logos:active {
+	transform: scale(0.9); /* Enlarge the logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for effect */
 }
