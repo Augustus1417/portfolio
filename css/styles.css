@@ -13,7 +13,7 @@ p {
 	font-size: large;
 }
 h1 {
-	font: larger;
+	font-size:40px;
 }
 #profile, #tools-tech{
     padding: 50px;
@@ -29,7 +29,7 @@ h1 {
 	backdrop-filter: blur(5px);
 	border-radius: 20px;	
 	background: rgba(35, 43, 56, 0.2);
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for effect */
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
 	margin: 20px;
 }
 #profile {
@@ -71,7 +71,7 @@ h1 {
 
 #moon {
 	position:absolute;
-	top: 45%;
+	top: 40%;
 	right: 20%;
 	z-index: -10;
 	width: 200px;
@@ -82,7 +82,7 @@ h1 {
 	flex-wrap: wrap;
 	gap: 10px;
 	justify-content: center;
-	/* min-width: 250px; */
+
 }
 .lpu {
 	width: 250px;
@@ -102,29 +102,80 @@ h1 {
 	width: 190px;
 }
 
-#tech {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next row */
-    justify-content: center; /* Center the rows horizontally */
-    gap: 20px; /* Space between items */
-    max-width: 600px; /* Restrict width to control the layout */
-    margin: auto;
-}
-
 .logos {
-    flex: 1 0 30%; /* Each item takes 30% of the row's width */
-    max-width: 120px; /* Prevent logos from growing too large */
-    height: auto; /* Maintain aspect ratio */
-    margin: auto; /* Center logos within their cell */
-	transition: transform 0.15s ease, box-shadow 0.15s ease; /* Smooth animation */
+    width: 120px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .logos:hover {
-	transform: scale(1.2); /* Enlarge the logo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for effect */
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: shake 0.6s ease;
 }
 
 .logos:active {
-	transform: scale(0.9); /* Enlarge the logo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for effect */
+    transform: scale(0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg) scale(1.2); }
+    25% { transform: rotate(-10deg) scale(1.2); }
+    50% { transform: rotate(10deg) scale(1.2); }
+    75% { transform: rotate(-10deg) scale(1.2); }
+    100% { transform: rotate(0deg) scale(1.2); }
+}
+
+#tech {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+    padding: 10px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+    width: 200px;
+    text-align: center;
+    z-index: 1;
+}
+
+.logos:hover+ .tooltip, .logos:active + .tooltip  {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    #tech {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    #tech {
+        grid-template-columns: 1fr;
+    }
 }
