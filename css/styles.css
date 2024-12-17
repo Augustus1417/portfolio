@@ -75,7 +75,108 @@ h1 {
 	right: 20%;
 	z-index: -10;
 	width: 200px;
+    animation: moon-hover 5s infinite;
 }
+#mars {
+    position:absolute;
+    z-index: -10;
+    top: 20%;
+    left: 60%;
+    width: 200px;
+    animation: mars-hover 8s infinite;
+}
+
+@keyframes mars-hover {
+    0% {top: 20%;}
+    25% {top: 25%}
+    50% {top: 20%;}
+    75% {top: 25%;}
+    100% {top: 20%;}
+}
+
+@keyframes moon-hover {
+    0% {top: 40%;}
+    25% {top: 45%}
+    50% {top: 40%;}
+    75% {top: 45%;}
+    100% {top: 40%;}
+}
+
+#ufo {
+    position: absolute;
+    z-index: -10;
+    width: 160px;
+    animation: sideToSide 10s  infinite;
+}
+#satellite {
+    position: absolute;
+    z-index: -10;
+    width: 200px;
+    animation: zigzag 20s linear infinite, rotate 5s linear infinite; /* Zigzag and rotate animations */
+}
+
+/* Zigzag movement */
+@keyframes zigzag {
+    0% {
+        top: 200%;
+        left: 0;
+    }
+    25% {
+        top: 210%;
+        left: 35%;
+    }
+    50% {
+        top: 190%;
+        left: 90%;
+    }
+    75% {
+        top: 210%;
+        left: 35%;
+    }
+    100% {
+        top: 200%;
+        left: 0%;
+    }
+}
+
+/* Continuous rotation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes sideToSide {
+    0% {
+        left: 0;
+        top: 110%;
+    }
+    25% {
+        left: 80%;
+        top: 150%;
+        transform: rotate(90deg);
+    }
+    50% {
+        left: 0%;
+        top: 110%;
+        transform: rotate(360deg);
+    }
+    75% {
+        left: 80%;
+        top: 90%;
+        transform: rotate(90deg);
+    }
+    100% {
+        left: 0%;
+        top: 110%;
+        transform: rotate(360deg);
+    }
+}
+
 
 #schools {
 	display: flex;
@@ -239,4 +340,22 @@ button:hover {
 a {
     display: block;
     text-decoration: none;
+}
+
+#socials {
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+a.links {
+    font-size: 60px;
+    color: var(--HoverBlue);
+    transition: all 0.15s ease;
+}
+
+a.links:hover {
+    transform: translateY(-10%);
 }
