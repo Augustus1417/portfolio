@@ -23,7 +23,7 @@
         <div id="schools">
             <div class="college">
                 <img class="lpu" src="images/lpu-is.png" alt="">
-                <h3>Lyceum of the Philippines University - Cavite:<br>International School<br>2021 - 2023</h3>
+                <h3>Lyceum of the Philippines University - Cavite<br>International School<br>2021 - 2023</h3>
             </div>
             <div class="college">
                 <img class="lpu" id="lpuc" src="images/lpu.png" alt="">
@@ -82,11 +82,33 @@
         <div class="tooltip">I use Vim for writing code efficiently, leveraging its powerful keybindings and customization options.</div>
     </div>
 </div>
-
-        
     </div>
     <div id="sample-projects">
-        <h1>My Projects</h1>
+    <h1>My Projects</h1>
+    <div class="carousel">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <a href="https://github.com/Augustus1417/WebDevProject">
+                    <img class="projects" src="images/learn_code.png" alt="Project 1">
+                </a>
+            </div>
+            <div class="carousel-slide">
+                <a href="https://github.com/Augustus1417/StudentSysGUI">
+                    <img class="projects" src="images/student_system.png" alt="Project 2">
+                </a>
+            </div>
+            <div class="carousel-slide">
+                <a href="https://github.com/Augustus1417/PasswordManager">
+                    <img class="projects" src="images/pw_manager.png" alt="Project 3">
+                </a>
+            </div>
+        </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
     </div>
+</div>
+   
+</div>
+<script src="script.js"></script>
 </body>
 </html>
