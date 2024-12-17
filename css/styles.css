@@ -112,10 +112,10 @@ h1 {
     position: absolute;
     z-index: -10;
     width: 200px;
-    animation: zigzag 20s linear infinite, rotate 5s linear infinite; /* Zigzag and rotate animations */
+    animation: zigzag 20s linear infinite, rotate 5s linear infinite;
 }
 
-/* Zigzag movement */
+
 @keyframes zigzag {
     0% {
         top: 200%;
@@ -139,7 +139,7 @@ h1 {
     }
 }
 
-/* Continuous rotation */
+
 @keyframes rotate {
     0% {
         transform: rotate(0deg);
@@ -298,12 +298,39 @@ h1 {
 .carousel-slide {
     flex-shrink: 0;
     width: 100%;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .projects {
     width: 100%;
+    height: auto;
     display: block;
     border-radius: 10px;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--Text);
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 0 0 10px 10px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .description {
+    opacity: 0;
 }
 
 button {
@@ -312,13 +339,11 @@ button {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    width: 55px;
     padding: 15px;
     cursor: pointer;
     font-size: 18px;
     border-radius: 50%;
     z-index: 1;
-    transition: all 0.15s ease;
 }
 
 .prev {
@@ -329,6 +354,10 @@ button {
 .next {
     right: 10px;
     transform: translateY(-50%);
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 button:hover {
@@ -351,11 +380,17 @@ a {
     justify-content: center;
 }
 a.links {
-    font-size: 60px;
+    font-size: 40px;
     color: var(--HoverBlue);
     transition: all 0.15s ease;
 }
 
 a.links:hover {
     transform: translateY(-10%);
+}
+
+#soc-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
