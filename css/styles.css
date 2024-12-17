@@ -340,6 +340,7 @@ button {
     color: white;
     border: none;
     padding: 15px;
+    width: 55px;
     cursor: pointer;
     font-size: 18px;
     border-radius: 50%;
@@ -354,10 +355,6 @@ button {
 .next {
     right: 10px;
     transform: translateY(-50%);
-}
-
-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 button:hover {
