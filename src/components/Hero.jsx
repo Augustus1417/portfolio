@@ -2,7 +2,7 @@ import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
 
 export default function Hero(){
     return (
-      <section id="hero" className="relative min-h-screen flex items-center justify-center px-6">
+      <section id="hero" className="relative min-h-screen flex items-center mt-15 justify-center px-6">
         <div className="max-w-4xl mx-auto text-center z-10">
           <h1 className="text-6xl md:text-8xl font-bold mb-6">
             Hi, I'm{' '}
